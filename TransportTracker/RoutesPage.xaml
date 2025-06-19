@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:TransportTracker.Models"
+             x:Class="TransportTracker.RoutesPage"
+             Title="Маршруты"
+             BackgroundColor="{StaticResource SecondaryColor}">
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="10">
+            <Button x:Name="AddRouteButton" 
+                    Text="Добавить маршрут" 
+                    Style="{StaticResource PrimaryButtonStyle}" 
+                    Clicked="OnAddRouteButtonClicked"/>
+            <Button Text="Работа" 
+                    Style="{StaticResource PrimaryButtonStyle}" 
+                    Clicked="OnWorkButtonClicked" />
+            <CollectionView x:Name="RoutesList" 
+                            SelectionMode="Single" 
+                            SelectionChanged="OnRouteSelected"
+                            VerticalScrollBarVisibility="Always"
+                            VerticalOptions="FillAndExpand"
+                            MinimumHeightRequest="300">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Route">
+                        <Frame Style="{StaticResource CardStyle}">
+                            <VerticalStackLayout Padding="10">
+                                <Label Text="{Binding Name}" Style="{StaticResource HeaderLabelStyle}" />
+                                <Label Text="{Binding Distance, StringFormat='Дальность: {0:F2} км'}" Style="{StaticResource BodyLabelStyle}" />
+                                <Label Text="{Binding DaysInTransit, StringFormat='Дней в пути: {0}'}" Style="{StaticResource BodyLabelStyle}" />
+                                <Label Text="{Binding Payment, StringFormat='Оплата: {0:C}'}" Style="{StaticResource BodyLabelStyle}" />
+                                <Button Text="Удалить" 
+                                        Style="{StaticResource DeleteButtonStyle}" 
+                                        Clicked="OnDeleteButtonClicked" 
+                                        CommandParameter="{Binding .}" 
+                                        HorizontalOptions="End" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

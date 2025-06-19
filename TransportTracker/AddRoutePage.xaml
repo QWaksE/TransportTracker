@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TransportTracker.AddRoutePage"
+             Title="Добавить маршрут"
+             BackgroundColor="{StaticResource SecondaryColor}">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Frame Style="{StaticResource CardStyle}">
+                <VerticalStackLayout Spacing="10" Padding="10">
+                    <Label Text="Название маршрута" Style="{StaticResource HeaderLabelStyle}" />
+                    <Entry x:Name="NameEntry" Placeholder="Введите название" />
+                    <Label Text="Дальность (км)" Style="{StaticResource HeaderLabelStyle}" />
+                    <Entry x:Name="DistanceEntry" Placeholder="Введите дальность" Keyboard="Numeric" />
+                    <Label Text="Дней в пути" Style="{StaticResource HeaderLabelStyle}" />
+                    <Entry x:Name="DaysInTransitEntry" Placeholder="Введите количество дней" Keyboard="Numeric" />
+                    <Label Text="Оплата (₽)" Style="{StaticResource HeaderLabelStyle}" />
+                    <Entry x:Name="PaymentEntry" Placeholder="Введите оплату" Keyboard="Numeric" />
+                    <Button x:Name="SaveButton" 
+                            Text="Сохранить" 
+                            Style="{StaticResource PrimaryButtonStyle}" 
+                            Clicked="OnSaveButtonClicked" />
+                    <Button x:Name="CancelButton" 
+                            Text="Отмена" 
+                            Style="{StaticResource SecondaryButtonStyle}" 
+                            Clicked="OnCancelButtonClicked" />
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

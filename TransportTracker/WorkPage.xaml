@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:TransportTracker.Models"
+             x:Class="TransportTracker.WorkPage"
+             Title="Работа"
+             BackgroundColor="{StaticResource SecondaryColor}">
+    <ScrollView>
+        <VerticalStackLayout Spacing="10" Padding="10">
+            <Button x:Name="AddWorkButton" 
+                    Text="Добавить работу" 
+                    Style="{StaticResource PrimaryButtonStyle}" 
+                    Clicked="OnAddWorkButtonClicked" />
+            <Button Text="Маршруты" 
+                    Style="{StaticResource PrimaryButtonStyle}" 
+                    Clicked="OnRoutesButtonClicked" />
+            <Button Text="Водители" 
+                    Style="{StaticResource PrimaryButtonStyle}" 
+                    Clicked="OnDriversButtonClicked" />
+            <CollectionView x:Name="WorkList" 
+                            SelectionMode="Single" 
+                            SelectionChanged="OnWorkSelected"
+                            VerticalScrollBarVisibility="Always"
+                            VerticalOptions="FillAndExpand"
+                            MinimumHeightRequest="300">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Work">
+                        <Frame Style="{StaticResource CardStyle}">
+                            <VerticalStackLayout Padding="10">
+                                <Label Text="{Binding RouteName, StringFormat='Маршрут: {0}'}" Style="{StaticResource HeaderLabelStyle}" />
+                                <Label Text="{Binding DriverFullName, StringFormat='Водитель 1: {0}'}" Style="{StaticResource BodyLabelStyle}" />
+                                <Label Text="{Binding SecondDriverFullName, StringFormat='Водитель 2: {0}'}" 
+                                       Style="{StaticResource BodyLabelStyle}" 
+                                       IsVisible="{Binding SecondDriverFullName, Converter={StaticResource NullToFalseConverter}}" />
+                                <Label Text="{Binding DepartureDate, StringFormat='Дата отправки: {0:dd.MM.yyyy}'}" Style="{StaticResource BodyLabelStyle}" />
+                                <Label Text="{Binding ReturnDate, StringFormat='Дата возвращения: {0:dd.MM.yyyy}'}" Style="{StaticResource BodyLabelStyle}" />
+                                <Label Text="{Binding Bonus, StringFormat='Премия: {0:C}'}" Style="{StaticResource BodyLabelStyle}" />
+                                <Label Text="{Binding TotalCost, StringFormat='Итоговая стоимость: {0:C}'}" 
+                                       Style="{StaticResource HeaderLabelStyle}" 
+                                       TextColor="{StaticResource AccentColor}" />
+                                <Button Text="Удалить" 
+                                        Style="{StaticResource DeleteButtonStyle}" 
+                                        Clicked="OnDeleteButtonClicked" 
+                                        CommandParameter="{Binding .}" 
+                                        HorizontalOptions="End" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

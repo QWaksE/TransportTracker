@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TransportTracker.AddDriverPage"
+             Title="Добавить водителя"
+             BackgroundColor="{StaticResource SecondaryColor}">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Frame Style="{StaticResource CardStyle}">
+                <VerticalStackLayout Spacing="10" Padding="10">
+                    <Label Text="Фамилия" Style="{StaticResource HeaderLabelStyle}" />
+                    <Entry x:Name="LastNameEntry" Placeholder="Введите фамилию" />
+
+                    <Label Text="Имя" Style="{StaticResource HeaderLabelStyle}" />
+                    <Entry x:Name="FirstNameEntry" Placeholder="Введите имя" />
+
+                    <Label Text="Отчество" Style="{StaticResource HeaderLabelStyle}" />
+                    <Entry x:Name="MiddleNameEntry" Placeholder="Введите отчество (опционально)" />
+
+                    <Label Text="Стаж (лет)" Style="{StaticResource HeaderLabelStyle}" />
+                    <Entry x:Name="ExperienceEntry" Placeholder="Введите стаж" Keyboard="Numeric" />
+
+                    <Button x:Name="SaveButton" 
+                            Text="Сохранить" 
+                            Style="{StaticResource PrimaryButtonStyle}" 
+                            Clicked="OnSaveButtonClicked" />
+                    <Button x:Name="CancelButton" 
+                            Text="Отмена" 
+                            Style="{StaticResource SecondaryButtonStyle}" 
+                            Clicked="OnCancelButtonClicked" />
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application
+    x:Class="TransportTracker.App"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TransportTracker"
+    xmlns:converters="clr-namespace:TransportTracker.Converters">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="PrimaryColor">#0078D4</Color>
+            <Color x:Key="SecondaryColor">#F5F5F5</Color>
+            <Color x:Key="AccentColor">#FF4081</Color>
+            <Color x:Key="TextColor">#212121</Color>
+            <Color x:Key="ErrorColor">#D32F2F</Color>
+            <Color x:Key="CardBackgroundColor">#FFFFFF</Color>
+            <Style TargetType="Button" x:Key="PrimaryButtonStyle">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="Padding" Value="10" />
+            </Style>
+            <Style TargetType="Button" x:Key="SecondaryButtonStyle">
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="BorderColor" Value="{StaticResource PrimaryColor}" />
+                <Setter Property="BorderWidth" Value="1" />
+            </Style>
+            <Style TargetType="Button" x:Key="DeleteButtonStyle">
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="{StaticResource ErrorColor}" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+            <Style TargetType="Label" x:Key="HeaderLabelStyle">
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="Margin" Value="0,5,0,5" />
+            </Style>
+            <Style TargetType="Label" x:Key="BodyLabelStyle">
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Margin" Value="0,2,0,2" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}" />
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+                <Setter Property="PlaceholderColor" Value="#757575" />
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+            <Style TargetType="Picker">
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}" />
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+                <Setter Property="TitleColor" Value="#757575" />
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+            <Style TargetType="DatePicker">
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}" />
+                <Setter Property="TextColor" Value="{StaticResource TextColor}" />
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+            <Style TargetType="Frame" x:Key="CardStyle">
+                <Setter Property="BackgroundColor" Value="{StaticResource CardBackgroundColor}" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="Margin" Value="5" />
+            </Style>
+            <Style TargetType="CollectionView">
+                <Setter Property="VerticalScrollBarVisibility" Value="Never" />
+            </Style>
+            <converters:NullToFalseConverter x:Key="NullToFalseConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

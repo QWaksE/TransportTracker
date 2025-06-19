@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TransportTracker.Converters.NullToFalseConverter" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converters\NullToFalseConverter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.181" />
+  </Class>
+  <Class Name="TransportTracker.Models.Driver">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAAAQAg=</HashCode>
+      <FileName>Models\Driver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.Models.Route">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAIAAAAQAAAAAAABAAAEAAAAAAAA=</HashCode>
+      <FileName>Models\Route.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.Models.Work">
+    <Position X="5.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAKAAAABAIAABAJEAAAAACQAgAAAACAABAAAAAAAAA=</HashCode>
+      <FileName>Models\Work.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.MainActivity">
+    <Position X="10.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Platforms\Android\MainActivity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.MainApplication">
+    <Position X="8" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Platforms\Android\MainApplication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.AddDriverPage">
+    <Position X="2.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAABACAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AddDriverPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.AddRoutePage">
+    <Position X="0.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAEAAAAACAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AddRoutePage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.AddWorkPage">
+    <Position X="8" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAAAAgACCgCAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AddWorkPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.App">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.AppShell">
+    <Position X="2.25" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AppShell.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.DriversPage">
+    <Position X="3" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIAAgBAAAAAAQAAAAAAAIAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>DriversPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.MainPage">
+    <Position X="7.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAIAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.MauiProgram">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MauiProgram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.RoutesPage">
+    <Position X="0.5" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIAAgAAACAAAQAAAAAAAIAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>RoutesPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.WorkPage">
+    <Position X="5.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAABAAAAgAAAAEAAQAAAAAAAAAAAEAAAAAIAAACAA=</HashCode>
+      <FileName>WorkPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransportTracker.Services.DatabaseService">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAABAAAAA=</HashCode>
+      <FileName>Services\DatabaseService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

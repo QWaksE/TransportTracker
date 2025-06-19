@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TransportTracker.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TransportTracker"
+    Title="TransportTracker">
+    <ShellContent
+        Title="Начальная страница"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="Работа"
+        ContentTemplate="{DataTemplate local:WorkPage}"
+        Route="WorkPage" />
+    <ShellContent
+        Title="Маршруты"
+        ContentTemplate="{DataTemplate local:RoutesPage}"
+        Route="RoutesPage" />
+    <ShellContent
+        Title="Водители"
+        ContentTemplate="{DataTemplate local:DriversPage}"
+        Route="DriversPage" />
+</Shell>
